@@ -1,7 +1,8 @@
+FILE = "hello"
 
-hello: hello.asm
-	nasm -f elf64 hello.asm
-	ld -s -o target/hello hello.o
+file:
+	nasm -f elf64 ${FILE}.asm
+	ld -s -o target/hello ${FILE}.o
 
 clean:
 	rm -rf *.o
